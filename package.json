@@ -1,0 +1,19 @@
+{
+  "name": "pointing-poker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eremor/Pointing-Poker.git"
+  },
+  "author": "Artem Smirnov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eremor/Pointing-Poker/issues"
+  },
+  "homepage": "https://github.com/Eremor/Pointing-Poker#readme"
+}
