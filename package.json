@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/Eremor/Pointing-Poker/issues"
   },
-  "homepage": "https://github.com/Eremor/Pointing-Poker#readme"
+  "homepage": "https://github.com/Eremor/Pointing-Poker#readme",
+  "devDependencies": {
+    "@types/node": "20.5.1",
+    "@types/webpack": "5.28.1",
+    "html-webpack-plugin": "5.5.3",
+    "ts-loader": "9.4.4",
+    "ts-node": "10.9.1",
+    "typescript": "5.1.6",
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4"
+  }
 }
