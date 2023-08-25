@@ -2,5 +2,5 @@ import { RuleSetRule } from 'webpack';
 
 export const webpackSvgLoader = (): RuleSetRule => ({
   test: /\.svg$/,
-  use: '@svgr/webpack'
+  use: '@svgr/webpack',
 });

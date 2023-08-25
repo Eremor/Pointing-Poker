@@ -13,9 +13,9 @@ export const webpackScssLoader = (isDev: boolean): RuleSetRule => ({
           localIdentName: isDev
             ? '[path][name]__[local]--[hash:base64:5]'
             : '[hash:base64:8]',
-        }
-      }
+        },
+      },
     },
-    'sass-loader'
-  ]
+    'sass-loader',
+  ],
 });

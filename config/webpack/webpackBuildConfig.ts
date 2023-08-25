@@ -3,11 +3,10 @@ import { webpackDevServer } from './webpackDevServer';
 import { webpackLoaders } from './webpackLoaders';
 import { webpackResolvers } from './webpackResolvers';
 
-import { BuildOptions } from "./types/config";
+import { BuildOptions } from './types/config';
 import { webpackPlugins } from './webpackPlugins';
 
 export const webpackBuildConfig = (options: BuildOptions): Configuration => {
-
   const { mode, paths, isDev } = options;
 
   return {
@@ -16,14 +15,14 @@ export const webpackBuildConfig = (options: BuildOptions): Configuration => {
     output: {
       filename: '[name].[contenthash].js',
       path: paths.build,
-      clean: true
+      clean: true,
     },
     module: {
-      rules: webpackLoaders(options)
+      rules: webpackLoaders(options),
     },
     resolve: webpackResolvers(options),
     plugins: webpackPlugins(options),
     devtool: isDev ? 'inline-source-map' : undefined,
-    devServer: isDev ? webpackDevServer(options) : undefined
-  }
-}
+    devServer: isDev ? webpackDevServer(options) : undefined,
+  };
+};

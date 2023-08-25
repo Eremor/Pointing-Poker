@@ -1,0 +1,10 @@
+# Ignore project configs
+/.*
+/*config.js
+/*config.ts
+
+# Ignore build directory
+/dist/**/*
+
+#Ignore node_modules
+node_modules/
