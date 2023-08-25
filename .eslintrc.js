@@ -12,6 +12,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'plugin:import/typescript',
     'plugin:prettier/recommended'
   ],
   parser: '@typescript-eslint/parser',
@@ -29,12 +30,16 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'import',
     'react-hooks'
   ],
   settings: {
     'import/resolver': {
       'typescript': {
         'project': './tsconfig.json'
+      },
+      'node': {
+        'extensions': ['.js', '.jsx', '.ts', '.tsx']
       }
     },
     'react': {
@@ -59,7 +64,8 @@ module.exports = {
     ],
     'max-len': ['error', { 'ignoreComments': true }],
     'import/no-extraneous-dependencies': 'off',
-    'import/extensions': 'off',
-    // 'import/named': 'off'
+  },
+  globals: {
+    __IS_DEV__: true,
   }
 }
