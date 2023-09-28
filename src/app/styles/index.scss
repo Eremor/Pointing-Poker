@@ -1,3 +1,14 @@
+@import 'normalize';
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;700&family=Roboto:wght@300;400;500;700&family=Ruda:wght@700&display=swap');
+@import '@mantine/core/styles.css';
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  margin: 0;
+  padding: 0;
+  background-color: var(--mantine-color-body);
 }
