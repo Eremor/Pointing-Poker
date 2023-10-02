@@ -31,7 +31,8 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'import',
-    'react-hooks'
+    'react-hooks',
+    'prettier'
   ],
   settings: {
     'import/resolver': {
@@ -57,9 +58,10 @@ module.exports = {
         'singleQuote': true,
         'trailingComma': 'es5',
         'bracketSpacing': true,
-        'bracketSameLine': true,
+        'bracketSameLine': false,
         'arrowParens': 'always',
-        'endOfLine': 'lf'
+        'endOfLine': 'lf',
+        'singleAttributePerLine': true
       }
     ],
     'max-len': ['error', { 'ignoreComments': true }],
