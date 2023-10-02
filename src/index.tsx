@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, MantineColorScheme } from '@mantine/core';
 import { BrowserRouter } from 'react-router-dom';
 
 import { mantineTheme } from 'app/config/mantine/theme';
@@ -10,12 +10,21 @@ import 'app/styles/index.scss';
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
+const defaultSystemTheme = window.matchMedia('(prefers-color-scheme: light)')
+  .matches
+  ? 'light'
+  : 'dark';
+
+const defaultColorTheme = (window.localStorage.getItem(
+  'mantine-color-scheme-value'
+) || defaultSystemTheme) as MantineColorScheme;
+
 root.render(
   <StrictMode>
     <BrowserRouter>
       <MantineProvider
         theme={mantineTheme}
-        defaultColorScheme="auto"
+        defaultColorScheme={defaultColorTheme}
       >
         <App />
       </MantineProvider>
