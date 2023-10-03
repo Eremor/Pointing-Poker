@@ -5,8 +5,10 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 
-import styles from './Header.module.scss';
 import { Logo } from 'shared/ui/Logo';
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+
+import styles from './Header.module.scss';
 
 const Header = () => {
   const theme = useMantineTheme();
@@ -17,7 +19,7 @@ const Header = () => {
       className={styles.Header}
       fluid
       bg={colorScheme === 'light' ? theme.colors.blue[6] : theme.colors.dark[6]}
-      h={65}
+      h={70}
       styles={{
         root: {
           display: 'flex',
@@ -36,6 +38,7 @@ const Header = () => {
         }}
       >
         <Logo className={styles.Logo} />
+        <ThemeSwitcher />
       </Flex>
     </Container>
   );
