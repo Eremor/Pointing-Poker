@@ -13,7 +13,8 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/typescript',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:storybook/recommended'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -67,6 +68,14 @@ module.exports = {
     'max-len': ['error', { 'ignoreComments': true }],
     'import/no-extraneous-dependencies': 'off',
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'max-len': 'off'
+      }
+    }
+  ],
   globals: {
     __IS_DEV__: true,
   }
