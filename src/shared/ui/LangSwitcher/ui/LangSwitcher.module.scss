@@ -1,0 +1,11 @@
+.Switcher {
+  padding: 5px;
+}
+
+.light:hover {
+  background-color: var(--mantine-color-blue-7);
+}
+
+.dark:hover {
+  background-color: var(--mantine-color-dark-5);
+}

@@ -79,6 +79,7 @@
     "storybook": "^7.4.6",
     "storybook-addon-mantine": "3.0.1",
     "storybook-dark-mode": "3.0.1",
+    "storybook-react-i18next": "2.0.9",
     "style-loader": "3.3.3",
     "stylelint": "15.10.3",
     "stylelint-config-standard-scss": "10.0.0",

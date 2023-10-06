@@ -1,12 +1,14 @@
 import {
   Container,
   Flex,
+  Group,
   useMantineTheme,
   useMantineColorScheme,
 } from '@mantine/core';
 
 import { Logo } from 'shared/ui/Logo';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
+import { LangSwitcher } from 'shared/ui/LangSwitcher';
 
 import styles from './Header.module.scss';
 
@@ -38,7 +40,10 @@ const Header = () => {
         }}
       >
         <Logo className={styles.Logo} />
-        <ThemeSwitcher />
+        <Group gap="sm">
+          <LangSwitcher />
+          <ThemeSwitcher />
+        </Group>
       </Flex>
     </Container>
   );

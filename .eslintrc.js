@@ -111,6 +111,12 @@ module.exports = {
         'selector': 'interface',
         'format': ['PascalCase']
       }
+    ],
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        'checksVoidReturn': false
+      }
     ]
   },
   globals: {

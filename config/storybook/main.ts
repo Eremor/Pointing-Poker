@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     '@storybook/addon-styling',
     'storybook-dark-mode',
     'storybook-addon-mantine',
+    'storybook-react-i18next'
   ],
   framework: {
     name: '@storybook/react-webpack5',
