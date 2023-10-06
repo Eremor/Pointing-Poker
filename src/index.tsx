@@ -6,6 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { mantineTheme } from 'app/config/mantine/theme';
 import { App } from 'app/App';
 
+import 'shared/config/i18n/i18n';
+
 import 'app/styles/index.scss';
 
 const root = createRoot(document.getElementById('root') as HTMLElement);

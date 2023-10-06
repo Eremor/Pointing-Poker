@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 const LobbyPage = () => {
-  return <div>Lobby page</div>;
+  const { t } = useTranslation();
+
+  return <div>{t('Lobby page')}</div>;
 };
 
 export default LobbyPage;

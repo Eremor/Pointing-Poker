@@ -1,5 +1,9 @@
+import { useTranslation } from 'react-i18next';
+
 const GameResultPage = () => {
-  return <div>Game Result page</div>;
+  const { t } = useTranslation();
+
+  return <div>{t('Game Result page')}</div>;
 };
 
 export default GameResultPage;

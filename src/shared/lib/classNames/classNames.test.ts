@@ -13,22 +13,20 @@ describe('classNames lib', () => {
   test('with mods', () => {
     const expected = 'someClass class1 class2 hovered scrollable';
     expect(
-      classNames(
-        'someClass',
-        ['class1', 'class2'],
-        { hovered: true, scrollable: true },
-      ),
+      classNames('someClass', ['class1', 'class2'], {
+        hovered: true,
+        scrollable: true,
+      })
     ).toBe(expected);
   });
 
   test('with mods false', () => {
     const expected = 'someClass class1 class2 hovered';
     expect(
-      classNames(
-        'someClass',
-        ['class1', 'class2'],
-        { hovered: true, scrollable: false },
-      ),
+      classNames('someClass', ['class1', 'class2'], {
+        hovered: true,
+        scrollable: false,
+      })
     ).toBe(expected);
   });
 });
