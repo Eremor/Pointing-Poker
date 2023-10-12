@@ -1,4 +1,8 @@
-import { ActionIcon, useMantineColorScheme } from '@mantine/core';
+import {
+  ActionIcon,
+  useComputedColorScheme,
+  useMantineColorScheme,
+} from '@mantine/core';
 
 import IconSun from 'shared/assets/icons/sun-icon.svg';
 import IconMoon from 'shared/assets/icons/moon-icon.svg';
@@ -13,20 +17,25 @@ interface ThemeSwitcherProps {
 
 const ThemeSwitcher = (props: ThemeSwitcherProps) => {
   const { className } = props;
-  const { colorScheme, setColorScheme } = useMantineColorScheme();
+  const computedColorScheme = useComputedColorScheme('light', {
+    getInitialValueInEffect: true,
+  });
+  const { setColorScheme } = useMantineColorScheme();
 
   return (
     <ActionIcon
       className={classNames(styles.ThemeSwitcher, [
         className as string,
-        colorScheme === 'light' ? styles.light : styles.dark,
+        computedColorScheme === 'light' ? styles.light : styles.dark,
       ])}
       size="lg"
       aria-label="Toggle color theme"
-      onClick={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')}
+      onClick={() =>
+        setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')
+      }
       variant="transparent"
     >
-      {colorScheme === 'dark' ? (
+      {computedColorScheme === 'dark' ? (
         <IconSun className={styles.Icon} />
       ) : (
         <IconMoon className={styles.Icon} />
