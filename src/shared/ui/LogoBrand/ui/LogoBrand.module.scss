@@ -1,0 +1,42 @@
+.LogoBrand {
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+  }
+}
+
+.Icon {
+  margin-right: clamp(10px, 2vw, 27px);
+
+  @media screen and (max-width: 450px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.Container {
+  position: relative;
+  max-width: min(60%, 420px);
+  width: 100%;
+
+  @media screen and (max-width: 450px) {
+    max-width: 280px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: clamp(19px, 4.8vw, 33px);
+    left: 45%;
+    width: min(60%, 350px);
+    height: 5px;
+    background-color: var(--mantine-color-white);
+    box-shadow: 0px 4px 4px rgba($color: #000000, $alpha: 0.25);
+    transform: rotate(345deg) translateX(-50%);
+  }
+}
+
+.Text {
+  font-size: clamp(40px, 10vw, 70px);
+  line-height: 1;
+}
