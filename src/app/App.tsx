@@ -1,13 +1,22 @@
 import { Header } from 'widgets/Header';
 import { AppRouter } from './providers/AppRouter';
+import { Container } from '@mantine/core';
 
 const App = () => {
   return (
     <div>
       <Header />
-      <div style={{ marginTop: 50 }}>
+      <Container
+        fluid
+        styles={{
+          root: {
+            display: 'flex',
+            justifyContent: 'center',
+          },
+        }}
+      >
         <AppRouter />
-      </div>
+      </Container>
     </div>
   );
 };
