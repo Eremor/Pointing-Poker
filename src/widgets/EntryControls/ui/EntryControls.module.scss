@@ -1,0 +1,36 @@
+.EntryControls {
+  margin-top: 6rem;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    margin-top: clamp(4rem, 10vw, 5rem);
+    flex-direction: column;
+  }
+}
+
+.ImageContainer {
+  margin-right: clamp(20px, 2.5vw, 40px);
+  width: max(400px, 50%);
+
+  @media screen and (max-width: 768px) {
+    margin-top: clamp(20px, 5vw, 40px);
+    margin-right: 0;
+    order: 2;
+    width: min(500px, 100%);
+  }
+}
+
+.Tabs {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.Tab {
+  @media screen and (max-width: 350px) {
+    padding-inline: 8px;
+  }
+}
+
+.Panel {
+  padding: 2rem;
+}

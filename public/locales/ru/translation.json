@@ -5,5 +5,9 @@
   "Not Found Page": "Страница не найдена",
   "lang": "Ру",
   "Poker": "Poker",
-  "Planning": "Planning"
+  "Planning": "Planning",
+  "Create session": "Создать сеанс",
+  "Create new session": "Создать новый сеанс",
+  "Connect to lobby": "Подключиться к лобби",
+  "Connect to lobby by URL": "Подключиться к лобби по URL"
 }

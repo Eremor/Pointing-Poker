@@ -1,9 +1,9 @@
 import { Center, Flex, Text } from '@mantine/core';
+import { useTranslation } from 'react-i18next';
 
 import BrandIcon from 'shared/assets/icons/brand-icon.svg';
 import { classNames } from 'shared/lib/classNames/classNames';
 import styles from './LogoBrand.module.scss';
-import { useTranslation } from 'react-i18next';
 
 interface LogoBrandProps {
   className?: string;
