@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import { mantineTheme } from 'app/config/mantine/theme';
 import { App } from 'app/App';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 import 'shared/config/i18n/i18n';
 
@@ -15,12 +16,14 @@ const root = createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <MantineProvider
-        theme={mantineTheme}
-        defaultColorScheme={'auto'}
-      >
-        <App />
-      </MantineProvider>
+      <StoreProvider>
+        <MantineProvider
+          theme={mantineTheme}
+          defaultColorScheme={'auto'}
+        >
+          <App />
+        </MantineProvider>
+      </StoreProvider>
     </BrowserRouter>
   </StrictMode>
 );
