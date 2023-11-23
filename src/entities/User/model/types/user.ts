@@ -1,5 +1,3 @@
-import { UUID } from 'crypto';
-
 export enum UserRole {
   DEALER = 'dealer',
   GAMER = 'gamer',
@@ -7,7 +5,7 @@ export enum UserRole {
 }
 
 export interface User {
-  id: UUID;
+  id: string;
   role: UserRole;
   firstName: string;
   lastName?: string;

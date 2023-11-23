@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { NavigateOptions, To } from 'react-router-dom';
 import { StateSchema } from './StateSchema';
 import rootReducer from './rootReducer';
+import { api, socket } from 'shared/api/api';
 
 export const createReduxStore = (
   initialState?: StateSchema,
@@ -15,6 +16,8 @@ export const createReduxStore = (
       getDefaultMiddleware({
         thunk: {
           extraArgument: {
+            socket: socket,
+            api: api,
             navigate,
           },
         },
