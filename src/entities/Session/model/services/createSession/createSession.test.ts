@@ -1,7 +1,7 @@
-import { TestAsyncThunk } from "shared/lib/test/testAsyncThunk/testAsyncThunk";
+import { TestAsyncThunk } from 'shared/lib/test/testAsyncThunk/testAsyncThunk';
 import { createSession } from './createSession';
-import { Session } from "../../types/session";
-import { UserRole } from "entities/User";
+import { Session } from '../../types/session';
+import { UserRole } from 'entities/User';
 
 jest.mock('axios');
 
@@ -9,7 +9,7 @@ const createSessionValue = {
   title: 'Test game',
   firstName: 'Test name',
   lastName: 'Test last name',
-  position: 'tester'
+  position: 'tester',
 };
 
 describe('createSession', () => {
@@ -23,16 +23,16 @@ describe('createSession', () => {
           firstName: 'Test name',
           lastName: 'Test last name',
           position: 'tester',
-          role: UserRole.DEALER
-        }
+          role: UserRole.DEALER,
+        },
       ],
       settings: {
         autoJoinToGame: false,
         autoOpeningCards: false,
         changeChoiceAfterRoundEnd: false,
-        dealerGamer: false
-      }
-    }
+        dealerGamer: false,
+      },
+    };
 
     const thunk = new TestAsyncThunk(createSession);
 
@@ -56,4 +56,4 @@ describe('createSession', () => {
     expect(result.meta.requestStatus).toBe('rejected');
     expect(result.payload).toBe('The game was not created');
   });
-})
+});
