@@ -2,35 +2,41 @@
   margin-top: 6rem;
   width: 100%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (width <= 768px) {
     margin-top: clamp(4rem, 10vw, 5rem);
     flex-direction: column;
   }
 }
 
 .ImageContainer {
-  margin-right: clamp(20px, 2.5vw, 40px);
+  margin-right: clamp(30px, 4vw, 60px);
   width: max(400px, 50%);
 
-  @media screen and (max-width: 768px) {
-    margin-top: clamp(20px, 5vw, 40px);
+  @media screen and (width <= 768px) {
+    margin-top: clamp(20px, 5vw, 30px);
     margin-right: 0;
     order: 2;
     width: min(500px, 100%);
   }
 }
 
-.Tabs {
-  height: 100%;
+.Container {
+  padding-top: clamp(10px, 2.5vw, 40px);
   flex-grow: 1;
+  justify-content: flex-start;
+  height: 100%;
 }
 
-.Tab {
-  @media screen and (max-width: 350px) {
-    padding-inline: 8px;
+.Text {
+  margin-block: clamp(15px, 1.5vw, 25px);
+  margin-left: 20%;
+  font-size: 22px;
+  line-height: 31px;
+  font-weight: 700;
+
+  @media screen and (width <= 768px) {
+    margin-left: 0;
+    margin-right: 20px;
+    align-self: center;
   }
-}
-
-.Panel {
-  padding: 2rem;
 }

@@ -7,7 +7,19 @@
   "Poker": "Poker",
   "Planning": "Planning",
   "Create session": "Create session",
-  "Create new session": "Create new session",
-  "Connect to lobby": "Connect to lobby",
-  "Connect to lobby by URL": "Connect to lobby by URL"
+  "Connect to lobby by URL": "Connect to lobby by URL",
+  "Start your planning": "Start your planning",
+  "Start new game": "Start new game",
+  "or": "or",
+  "Error game title": "Game title cannot be empty",
+  "Error first name": "First name must have 2  or more characters",
+  "Form title": "Game title:",
+  "Form first name": "Your first name:",
+  "Form last name": "Your last name:",
+  "Form position": "Your job position:",
+  "Form image": "Image:",
+  "Form download": "Download avatar",
+  "Form create": "Create",
+  "Form cancel": "Cancel",
+  "Modal title create": "Create new game session"
 }

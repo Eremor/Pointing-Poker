@@ -27,6 +27,7 @@ export const createSession = createAsyncThunk<
       throw new Error();
     }
 
+    extra.navigate?.(`/${response.data.id}`);
     return response.data;
   } catch (error) {
     console.log(error);

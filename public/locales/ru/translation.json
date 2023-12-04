@@ -7,7 +7,19 @@
   "Poker": "Poker",
   "Planning": "Planning",
   "Create session": "Создать сеанс",
-  "Create new session": "Создать новый сеанс",
-  "Connect to lobby": "Подключиться к лобби",
-  "Connect to lobby by URL": "Подключиться к лобби по URL"
+  "Connect to lobby by URL": "Подключиться к лобби по URL",
+  "Start your planning": "Начните планирование",
+  "Start new game": "Начать новую игру",
+  "or": "или",
+  "Error game title": "Название игры не может быть пустым",
+  "Error first name": "Имя должно состоять из 2 или более символов",
+  "Form title": "Название игры:",
+  "Form first name": "Ваше имя:",
+  "Form last name": "Ваша фамилия:",
+  "Form position": "Ваша должность:",
+  "Form image": "Изображение:",
+  "Form download": "Загрузить аватар",
+  "Form create": "Создать",
+  "Form cancel": "Отмена",
+  "Modal title create": "Создать новую игровую сессию"
 }

@@ -4,8 +4,8 @@ import { createSession } from '../services/createSession/createSession';
 
 const initialState: SessionSchema = {
   isLoading: false,
-  data: undefined,
   error: undefined,
+  data: undefined,
 };
 
 export const sessionSlice = createSlice({

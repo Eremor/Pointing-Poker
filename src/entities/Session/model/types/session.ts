@@ -22,3 +22,14 @@ export interface SessionSchema {
   data?: Session;
   error?: string;
 }
+
+export interface SessionDTO {
+  firstName: string;
+  lastName?: string;
+  position?: string;
+  avatar?: string;
+}
+
+export interface CreateSessionDTO extends SessionDTO {
+  title: string;
+}

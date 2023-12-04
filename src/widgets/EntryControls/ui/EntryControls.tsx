@@ -1,54 +1,41 @@
-import { Flex, Tabs } from '@mantine/core';
+import { Flex, Box, Text } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
+import { CreateSessionPanel } from 'features/CreateSession';
+import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import ScrumImage from 'shared/assets/images/scrum.svg';
 
 import styles from './EntryControls.module.scss';
 
 const EntryControls = () => {
   const { t } = useTranslation();
+  const { titleColor } = useThemeColors();
   return (
     <Flex
       className={styles.EntryControls}
       justify="space-between"
       align="center"
     >
-      <div className={styles.ImageContainer}>
+      <Box className={styles.ImageContainer}>
         <ScrumImage />
-      </div>
-      <Tabs
-        variant="outline"
-        radius="md"
-        defaultValue="connect"
-        className={styles.Tabs}
+      </Box>
+      <Flex
+        direction="column"
+        className={styles.Container}
       >
-        <Tabs.List justify="center">
-          <Tabs.Tab
-            value="create"
-            className={styles.Tab}
-          >
-            {t('Create session')}
-          </Tabs.Tab>
-          <Tabs.Tab
-            value="connect"
-            className={styles.Tab}
-          >
-            {t('Connect to lobby')}
-          </Tabs.Tab>
-        </Tabs.List>
-        <Tabs.Panel
-          value="create"
-          className={styles.Panel}
+        <CreateSessionPanel />
+        <Text
+          className={styles.Text}
+          styles={{
+            root: {
+              color: titleColor,
+            },
+          }}
         >
-          {t('Create new session')}
-        </Tabs.Panel>
-        <Tabs.Panel
-          value="connect"
-          className={styles.Panel}
-        >
-          {t('Connect to lobby by URL')}
-        </Tabs.Panel>
-      </Tabs>
+          {t('or')}
+        </Text>
+        {t('Connect to lobby by URL')}
+      </Flex>
     </Flex>
   );
 };
