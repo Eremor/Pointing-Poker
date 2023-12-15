@@ -1,7 +1,7 @@
 import { Flex, Box, Text } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
-import { CreateSessionPanel } from 'features/CreateSession';
+import { CreateSessionBlock } from 'features/CreateSession';
 import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import ScrumImage from 'shared/assets/images/scrum.svg';
 
@@ -23,7 +23,7 @@ const EntryControls = () => {
         direction="column"
         className={styles.Container}
       >
-        <CreateSessionPanel />
+        <CreateSessionBlock />
         <Text
           className={styles.Text}
           styles={{
@@ -34,7 +34,7 @@ const EntryControls = () => {
         >
           {t('or')}
         </Text>
-        {t('Connect to lobby by URL')}
+        {t('Connect to session by URL')}:
       </Flex>
     </Flex>
   );

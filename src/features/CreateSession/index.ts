@@ -1,1 +1,1 @@
-export { CreateSessionPanel } from './ui/CreateSessionPanel/CreateSessionPanel';
+export { CreateSessionBlock } from './ui/CreateSessionBlock/CreateSessionBlock';

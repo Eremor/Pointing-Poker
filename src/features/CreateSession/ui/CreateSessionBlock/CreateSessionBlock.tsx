@@ -4,16 +4,16 @@ import { useTranslation } from 'react-i18next';
 import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import { CreateSessionForm } from '../CreateSessionForm/CreateSessionForm';
 
-import styles from './CreateSessionPanel.module.scss';
+import styles from './CreateSessionBlock.module.scss';
 
-const CreateSessionPanel = () => {
+const CreateSessionBlock = () => {
   const { t } = useTranslation();
   const { buttonColor, titleColor } = useThemeColors();
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
     <Flex
-      className={styles.CreateSessionPanel}
+      className={styles.CreateSessionBlock}
       direction="column"
     >
       <Title
@@ -66,4 +66,4 @@ const CreateSessionPanel = () => {
   );
 };
 
-export { CreateSessionPanel };
+export { CreateSessionBlock };
