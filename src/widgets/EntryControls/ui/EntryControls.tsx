@@ -1,7 +1,8 @@
-import { Flex, Box, Text } from '@mantine/core';
+import { Flex, Box, Text, Title } from '@mantine/core';
 import { useTranslation } from 'react-i18next';
 
 import { CreateSessionBlock } from 'features/CreateSession';
+import { ConnectSessionBlock } from 'features/ConnectSession';
 import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import ScrumImage from 'shared/assets/images/scrum.svg';
 
@@ -23,6 +24,17 @@ const EntryControls = () => {
         direction="column"
         className={styles.Container}
       >
+        <Title
+          order={3}
+          styles={{
+            root: {
+              color: titleColor,
+            },
+          }}
+          className={styles.Title}
+        >
+          {t('Start your planning')}:
+        </Title>
         <CreateSessionBlock />
         <Text
           className={styles.Text}
@@ -34,7 +46,7 @@ const EntryControls = () => {
         >
           {t('or')}
         </Text>
-        {t('Connect to session by URL')}:
+        <ConnectSessionBlock />
       </Flex>
     </Flex>
   );

@@ -1,4 +1,4 @@
-import { Flex, Text, Button, Title, Modal } from '@mantine/core';
+import { Flex, Text, Button, Modal } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { useTranslation } from 'react-i18next';
 import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
@@ -8,7 +8,7 @@ import styles from './CreateSessionBlock.module.scss';
 
 const CreateSessionBlock = () => {
   const { t } = useTranslation();
-  const { buttonColor, titleColor } = useThemeColors();
+  const { buttonColor } = useThemeColors();
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
@@ -16,17 +16,6 @@ const CreateSessionBlock = () => {
       className={styles.CreateSessionBlock}
       direction="column"
     >
-      <Title
-        order={3}
-        styles={{
-          root: {
-            color: titleColor,
-          },
-        }}
-        className={styles.Title}
-      >
-        {t('Start your planning')}:
-      </Title>
       <Flex
         align="center"
         justify="flex-start"

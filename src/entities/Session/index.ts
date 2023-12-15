@@ -9,6 +9,7 @@ export {
 export { sessionActions, sessionReducer } from './model/slice/sessionSlice';
 
 export { createSession } from './model/services/createSession/createSession';
+export { checkSession } from './model/services/checkSession/checkSession';
 
 export {
   getSessionTitle,
