@@ -1,14 +1,14 @@
 import { DeepPartial } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/StoreProvider';
-import { getGameTitle } from './getGameTitle';
+import { getSessionSettings } from './getSessionSettings';
 
-describe('getGameTitle', () => {
+describe('getSessionSettings', () => {
   test('should return value', () => {
     const state: DeepPartial<StateSchema> = {
       session: {
         data: {
           id: '1180a594-d348-444a-a6fe-0a4550e416f4',
-          title: 'Game title',
+          title: '',
           users: [],
           settings: {
             autoJoinToGame: false,
@@ -20,11 +20,11 @@ describe('getGameTitle', () => {
       },
     };
 
-    expect(getGameTitle(state as StateSchema)).toEqual('Game title');
+    expect(getSessionSettings(state as StateSchema)).toBeInstanceOf(Object);
   });
 
-  test('should return undefined with empty state', () => {
+  test('should work with empty state', () => {
     const state: DeepPartial<StateSchema> = {};
-    expect(getGameTitle(state as StateSchema)).toBeUndefined();
+    expect(getSessionSettings(state as StateSchema)).toEqual(undefined);
   });
 });

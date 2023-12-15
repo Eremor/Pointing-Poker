@@ -1,7 +1,7 @@
 import { UUID } from 'crypto';
-import { User } from 'entities/User';
+import { User, UserRole } from 'entities/User';
 
-export interface GameSettings {
+export interface SessionSettings {
   dealerGamer: boolean;
   autoJoinToGame: boolean;
   autoOpeningCards: boolean;
@@ -13,7 +13,7 @@ export interface GameSettings {
 export interface Session {
   id: UUID;
   title: string;
-  settings: GameSettings;
+  settings: SessionSettings;
   users: User[];
 }
 
@@ -25,6 +25,7 @@ export interface SessionSchema {
 
 export interface SessionDTO {
   firstName: string;
+  role: UserRole;
   lastName?: string;
   position?: string;
   avatar?: string;

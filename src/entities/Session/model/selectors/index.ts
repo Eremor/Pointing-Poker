@@ -1,5 +1,5 @@
-export { getGameSettings } from './getGameSettings/getGameSettings';
-export { getGameTitle } from './getGameTitle/getGameTitle';
+export { getSessionSettings } from './getSessionSettings/getSessionSettings';
+export { getSessionTitle } from './getSessionTitle/getSessionTitle';
 export { getSessionError } from './getSessionError/getSessionError';
 export { getSessionID } from './getSessionID/getSessionID';
 export { getSessionLoading } from './getSessionLoading/getSessionLoading';

@@ -9,11 +9,11 @@
   "Create session": "Создать сеанс",
   "Connect to lobby by URL": "Подключиться к лобби по URL",
   "Start your planning": "Начните планирование",
-  "Start new game": "Начать новую игру",
+  "Start new session": "Начать новый сеанс",
   "or": "или",
-  "Error game title": "Название игры не может быть пустым",
+  "Error session title": "Название сеанса не может быть пустым",
   "Error first name": "Имя должно состоять из 2 или более символов",
-  "Form title": "Название игры:",
+  "Form title": "Название сеанса:",
   "Form first name": "Ваше имя:",
   "Form last name": "Ваша фамилия:",
   "Form position": "Ваша должность:",
@@ -21,5 +21,5 @@
   "Form download": "Загрузить аватар",
   "Form create": "Создать",
   "Form cancel": "Отмена",
-  "Modal title create": "Создать новую игровую сессию"
+  "Modal title create": "Создать новый сеанс"
 }

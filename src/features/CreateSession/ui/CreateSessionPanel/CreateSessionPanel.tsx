@@ -41,7 +41,7 @@ const CreateSessionPanel = () => {
           color={buttonColor}
           onClick={open}
         >
-          {t('Start new game')}
+          {t('Start new session')}
         </Button>
       </Flex>
       <Modal

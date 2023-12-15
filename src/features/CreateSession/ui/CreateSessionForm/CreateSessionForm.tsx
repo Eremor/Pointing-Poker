@@ -13,6 +13,7 @@ import {
 import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { CreateSessionDTO, createSession } from 'entities/Session';
+import { UserRole } from 'entities/User';
 
 import styles from './CreateSessionForm.module.scss';
 
@@ -30,18 +31,19 @@ const CreateSessionForm = ({ onCloseModal }: CreateSessionFormProps) => {
     initialValues: {
       title: '',
       firstName: '',
+      role: UserRole.DEALER,
       lastName: undefined,
       position: undefined,
       avatar: undefined,
     },
     validate: {
-      title: isNotEmpty(`${t('Error game title')}`),
+      title: isNotEmpty(`${t('Error session title')}`),
       firstName: hasLength({ min: 2 }, `${t('Error first name')}`),
     },
   });
 
-  const createGame = (values: CreateSessionDTO) => {
-    console.log(values);
+  const createNewSession = (values: CreateSessionDTO) => {
+    // console.log(values);
     dispatch(createSession(values));
     onCloseModal();
   };
@@ -59,7 +61,7 @@ const CreateSessionForm = ({ onCloseModal }: CreateSessionFormProps) => {
   return (
     <form
       className={styles.CreateSessionForm}
-      onSubmit={form.onSubmit(createGame)}
+      onSubmit={form.onSubmit(createNewSession)}
     >
       <TextInput
         data-autofocus

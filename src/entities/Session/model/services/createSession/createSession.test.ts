@@ -6,17 +6,18 @@ import { UserRole } from 'entities/User';
 jest.mock('axios');
 
 const createSessionValue = {
-  title: 'Test game',
+  title: 'Test session',
   firstName: 'Test name',
   lastName: 'Test last name',
   position: 'tester',
+  role: UserRole.DEALER,
 };
 
 describe('createSession', () => {
   test('successful session creation', async () => {
     const resultData: Session = {
       id: '1180a594-d348-444a-a6fe-0a4550e416f4',
-      title: 'Test game',
+      title: 'Test session',
       users: [
         {
           id: '123',
