@@ -1,25 +1,19 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
-// import { useTranslation } from 'react-i18next';
+import { Session } from '../../types/session';
 
 export const checkSession = createAsyncThunk<
-  boolean,
+  Session,
   string,
   ThunkConfig<string>
 >('session/checkSession', async (sessionID, thunkApi) => {
-  // const { t } = useTranslation();
   const { extra, rejectWithValue } = thunkApi;
 
   try {
-    const response = await extra.api.get(`/session/${sessionID}`);
+    const response = await extra.api.get<Session>(`/session/${sessionID}`);
 
-    console.log(response);
-    if (response.data !== undefined) {
-      return true;
-    }
-
-    return false;
+    return response.data;
   } catch (error) {
-    return rejectWithValue('check session error');
+    return rejectWithValue('Invalid session ID');
   }
 });

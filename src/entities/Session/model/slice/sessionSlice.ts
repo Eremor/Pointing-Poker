@@ -7,7 +7,6 @@ import { checkSession } from '../services/checkSession/checkSession';
 
 const initialState: SessionSchema = {
   isLoading: false,
-  isSessionExist: false,
   error: undefined,
   data: undefined,
 };
@@ -41,13 +40,14 @@ export const sessionSlice = createSlice({
       )
       .addCase(checkSession.pending, (state) => {
         state.error = undefined;
+        state.data = undefined;
         state.isLoading = true;
       })
       .addCase(
         checkSession.fulfilled,
-        (state, action: PayloadAction<boolean>) => {
+        (state, action: PayloadAction<Session>) => {
           state.isLoading = false;
-          state.isSessionExist = action.payload;
+          state.data = action.payload;
         }
       )
       .addCase(

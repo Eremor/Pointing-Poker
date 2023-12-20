@@ -21,7 +21,6 @@ export interface SessionSchema {
   isLoading: boolean;
   data?: Session;
   error?: string;
-  isSessionExist: boolean;
 }
 
 export interface SessionDTO {

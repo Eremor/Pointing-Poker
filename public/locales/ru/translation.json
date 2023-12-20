@@ -7,7 +7,7 @@
   "Poker": "Poker",
   "Planning": "Planning",
   "Create session": "Создать сеанс",
-  "Connect to session by URL": "Подключиться к сеансу по URL",
+  "Connect to session by ID": "Подключиться к сеансу по ID",
   "Start your planning": "Начните планирование",
   "Start new session": "Начать новый сеанс",
   "or": "или",
@@ -22,5 +22,7 @@
   "Form create": "Создать",
   "Form cancel": "Отмена",
   "Modal title create": "Создать новый сеанс",
-  "Connect": "Подключиться"
+  "Connect": "Подключиться",
+  "Invalid session ID": "Неверный ID сеанса",
+  "connect input validate error": "нужно указать ID"
 }

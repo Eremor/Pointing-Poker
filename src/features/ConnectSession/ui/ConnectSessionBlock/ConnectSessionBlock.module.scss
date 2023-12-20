@@ -3,7 +3,8 @@
   gap: clamp(6px, 2.5vw, 10px);
 }
 
-.Container {
+.Form {
+  display: flex;
   flex-wrap: nowrap;
   width: 100%;
   gap: 0;
@@ -15,18 +16,19 @@
   flex-grow: 2;
 
   input {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
 
 .dark {
   input {
+    // stylelint-disable-next-line custom-property-pattern
     --_input-bd-focus: #fab005;
   }
 }
 
 .Button {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

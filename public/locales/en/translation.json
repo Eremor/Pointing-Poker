@@ -7,7 +7,7 @@
   "Poker": "Poker",
   "Planning": "Planning",
   "Create session": "Create session",
-  "Connect to session by URL": "Connect to session by URL",
+  "Connect to session by ID": "Connect to session by ID",
   "Start your planning": "Start your planning",
   "Start new session": "Start new session",
   "or": "or",
@@ -22,5 +22,7 @@
   "Form create": "Create",
   "Form cancel": "Cancel",
   "Modal title create": "Create new session",
-  "Connect": "Connect"
+  "Connect": "Connect",
+  "Invalid session ID": "Invalid session ID",
+  "connect input validate error": "ID required"
 }
