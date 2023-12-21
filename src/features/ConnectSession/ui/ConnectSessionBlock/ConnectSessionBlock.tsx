@@ -57,8 +57,7 @@ const ConnectSessionBlock = () => {
     if (sessionID) {
       open();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sessionID]);
+  }, [sessionID, open]);
 
   return (
     <Flex

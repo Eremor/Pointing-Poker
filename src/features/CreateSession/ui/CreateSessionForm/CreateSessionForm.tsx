@@ -43,7 +43,6 @@ const CreateSessionForm = ({ onCloseModal }: CreateSessionFormProps) => {
   });
 
   const createNewSession = (values: CreateSessionDTO) => {
-    // console.log(values);
     dispatch(createSession(values));
     onCloseModal();
   };
