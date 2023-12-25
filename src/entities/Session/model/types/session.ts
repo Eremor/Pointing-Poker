@@ -23,7 +23,7 @@ export interface SessionSchema {
   error?: string;
 }
 
-export interface SessionDTO {
+export interface SessionUserDTO {
   firstName: string;
   role: UserRole;
   lastName?: string;
@@ -31,6 +31,6 @@ export interface SessionDTO {
   avatar?: string;
 }
 
-export interface CreateSessionDTO extends SessionDTO {
+export interface CreateSessionDTO extends SessionUserDTO {
   title: string;
 }

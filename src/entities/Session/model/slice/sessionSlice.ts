@@ -4,6 +4,7 @@ import { User } from 'entities/User';
 
 import { createSession } from '../services/createSession/createSession';
 import { checkSession } from '../services/checkSession/checkSession';
+import { joinSession } from '../services/joinSession/joinSession';
 
 const initialState: SessionSchema = {
   isLoading: false,
@@ -56,7 +57,21 @@ export const sessionSlice = createSlice({
           state.isLoading = false;
           state.error = action.payload;
         }
-      );
+      )
+      .addCase(joinSession.pending, (state) => {
+        state.error = undefined;
+        state.isLoading = true;
+      })
+      .addCase(joinSession.fulfilled, (state) => {
+        state.isLoading = false;
+      })
+      .addCase(
+        joinSession.rejected,
+        (state, action: PayloadAction<string | undefined>) => {
+          state.isLoading = false;
+          state.error = action.payload;
+        }
+      )
   },
 });
 

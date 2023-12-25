@@ -19,6 +19,7 @@ import { useThemeColors } from 'shared/lib/hooks/useThemeColors';
 import { checkSession, getSessionError, getSessionID } from 'entities/Session';
 
 import styles from './ConnectSessionBlock.module.scss';
+import { ConnectSessionForm } from '../ConnectSessionForm/ConnectSessionForm';
 
 interface ConnectionFormProps {
   sessionID: string;
@@ -88,7 +89,9 @@ const ConnectSessionBlock = () => {
         onClose={close}
         title="Connection title"
         centered
-      />
+      >
+        <ConnectSessionForm onCloseModal={close} />
+      </Modal>
     </Flex>
   );
 };
